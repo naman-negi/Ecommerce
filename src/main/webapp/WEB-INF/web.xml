@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>Ecommerce</display-name>
+  <welcome-file-list>
+    <welcome-file>FirstPage.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Adminsearch</display-name>
+    <servlet-name>Adminsearch</servlet-name>
+    <servlet-class>com.admin.Adminsearch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Adminsearch</servlet-name>
+    <url-pattern>/Adminsearch</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Viewinfo</display-name>
+    <servlet-name>Viewinfo</servlet-name>
+    <servlet-class>com.to.Viewinfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Viewinfo</servlet-name>
+    <url-pattern>/Viewinfo</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <description></description>
+    <display-name>Ucservlet</display-name>
+    <servlet-name>Ucservlet</servlet-name>
+    <servlet-class>com.uc.Ucservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ucservlet</servlet-name>
+    <url-pattern>/Ucservlet</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <description></description>
+    <display-name>Usearch</display-name>
+    <servlet-name>Usearch</servlet-name>
+    <servlet-class>com.us.Usearch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Usearch</servlet-name>
+    <url-pattern>/Usearch</url-pattern>
+  </servlet-mapping>
+</web-app>

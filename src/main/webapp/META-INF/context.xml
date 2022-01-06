@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource
+        name="jdbc/shoedatabase" 
+        auth="Container"
+        type="javax.sql.DataSource"
+        maxActive="100" maxIdle="30" 
+        maxWait="10000" 
+        url="jdbc:mysql://localhost:3306/shoedatabase"
+        driverClassName="com.mysql.jdbc.Driver"
+        username="root" 
+        password="9055"
+    />
+</Context>
