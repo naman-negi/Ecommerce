@@ -35,6 +35,7 @@ public class Adminsearch extends HttpServlet {
 			}
 			if (memoryFlag == 1) {
 				sb = null;
+				System.gc(); // Suggests JVM to run garbage collector
 				break;
 			}
 		}
