@@ -11,25 +11,20 @@ public class Adminsearch extends HttpServlet {
     public Adminsearch() {
         super();
     }
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-	{
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try
+		{
 		int charsToAdd = 5_000_000;
 		String str1 = request.getParameter("username");
-		if(str1.equalsIgnoreCase("stop"))
-		{
+		if (str1.equalsIgnoreCase("stop")) {
 			memoryFlag = 1;
+		} else {
+			memoryFlag = 0;
 		}
-		else
-		{
-			memoryFlag=0;
-		}
-		while (true)
-		{
+		while (true) {
 			StringBuilder sb = new StringBuilder();
-			for (int i = 0; i < 10; i++)
-			{
-				for (int j = 0; j < charsToAdd; j++)
-				{
+			for (int i = 0; i < 10; i++) {
+				for (int j = 0; j < charsToAdd; j++) {
 					sb.append('a');
 				}
 			}
@@ -38,6 +33,10 @@ public class Adminsearch extends HttpServlet {
 				System.gc(); // Suggests JVM to run garbage collector
 				break;
 			}
+		}
+		}catch (Exception ex)
+		{
+			System.gc(); // Suggests JVM to run garbage collector
 		}
 		}
 
